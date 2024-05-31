@@ -1,0 +1,18 @@
+The complexity of the `adjust_grid` function depends on the size of the input set `positions`. Let's denote `n` as
+the number of elements in `positions`.
+
+1. In the first loop, for each position in `positions`, it calls `get_neighbors(position)` which has a time complexity of O(8)
+since it iterates over a fixed-size list of length 8. So, this loop has a time complexity of O(n).
+
+2. In the second loop, it iterates over all neighbors of positions in `positions` and checks if they have exactly 3 neighbors
+in the `positions` set. Since the maximum number of neighbors for a position is 8 and the set operations like `in` and `add`
+typically have O(1) complexity, this loop also has a time complexity of O(n).
+
+So, the overall time complexity of the `adjust_grid` function is O(n).
+
+As for the `get_neighbors` function:
+
+1. It iterates over a fixed-size list of length 8 for each position, so it has a time complexity of O(8) which simplifies to O(1)
+since it's a constant time operation.
+
+Thus, the overall time complexity of the `get_neighbors` function is O(1).
